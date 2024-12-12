@@ -1,0 +1,39 @@
+<div class="mt-0 d-flex justify-content-center">
+  <div class="w-100">
+    <div
+      class="border rounded p-2 mb-4 d-flex justify-content-between flex-row gap-2 align-items-center"
+      style="background-color: #ffffff; padding: 10px"
+    >
+      <div class="d-flex flex-column">
+        <h5 class="mb-1">{{ brandDetailData.drugName }}</h5>
+        <span class="text-muted">{{ brandDetailData.formation }}</span>
+      </div>
+      <h4 class="mt-2 fw-bold">৳ {{ brandDetailData.totalSales | number }}</h4>
+    </div>
+    <div class="border rounded p-2 mb-2">
+      <div class="d-flex justify-content-between">
+        <span class="text-style">Highest sales in</span>
+        <span class="text-style">{{
+          brandDetailData.highestSalesLocation
+        }}</span>
+      </div>
+      <div class="d-flex justify-content-between">
+        <span class="text-style">Lowest sales in</span>
+        <span class="text-style">{{
+          brandDetailData.lowestSalesLocation
+        }}</span>
+      </div>
+    </div>
+
+    <div class="border rounded p-2 mb-2">
+      <div class="d-flex justify-content-between">
+        <span>Best Performance in</span>
+        <span>{{ brandDetailData.highestSalesMonth }}</span>
+      </div>
+      <div class="d-flex justify-content-between">
+        <span>Lowest Performance in</span>
+        <span>{{ brandDetailData.lowestSalesMonth }}</span>
+      </div>
+    </div>
+  </div>
+</div>

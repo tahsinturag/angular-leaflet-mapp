@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+/* @import "~leaflet/dist/leaflet.css"; */
+.form-control:focus {
+  color: var(--bs-body-color);
+  background-color: #ffffff;
+  border-color: #80808080;
+  outline: 0;
+  box-shadow: none !important;
+}
+input {
+  border: none;
+  outline: none;
+  background: #ffffff;
+  flex-grow: 1;
+}
+.clear-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #888;
+}
+
+.clear-btn:hover {
+  color: #000;
+}

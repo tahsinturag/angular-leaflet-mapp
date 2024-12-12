@@ -1,0 +1,53 @@
+::ng-deep .nav-tabs {
+  --bs-nav-tabs-border-width: 0;
+  --bs-nav-tabs-border-color: 0;
+}
+::ng-deep .nav-link {
+  color: #808080;
+  font-size: 14px;
+  font-weight: 400;
+}
+::ng-deep .nav-tabs .nav-link.active {
+  font-weight: 700;
+  font-size: 14px;
+}
+::ng-deep .nav-tabs .nav-link:hover {
+  color: #000;
+}
+
+.title-style {
+  color: #282b31;
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+.date-style {
+  color: #808080;
+  font-weight: 400;
+  font-size: 12px;
+  margin-bottom: 0px;
+}
+.loc-text {
+  color: #808080;
+  font-weight: 400;
+  font-size: 12px;
+  margin-bottom: 3px;
+}
+.loc-val {
+  color: #282b31;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0px;
+}
+.total-sales {
+  color: #808080;
+  font-weight: 400;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+.total-amount {
+  color: #282b31;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0px;
+}

@@ -1,0 +1,145 @@
+<div class="container mt-1">
+  <div *ngIf="isShowDivisionDetails || showBrandDetails">
+    <div class="d-flex justify-content-start gap-3 align-items-center mb-4">
+      <i
+        class="fas fa-chevron-left"
+        style="cursor: pointer"
+        (click)="onGoBack()"
+      ></i>
+      <h2 class="text-center mb-1 fs-5">Report</h2>
+    </div>
+  </div>
+  <div *ngIf="!isShowDivisionDetails && !showBrandDetails">
+    <div class="d-flex justify-content-between align-items-center mb-2">
+      <h2 class="text-center mb-1 fs-5">Showing Result</h2>
+      <i class="fas fa-download"></i>
+    </div>
+  </div>
+  <div *ngIf="showBrandDetails">
+    <app-brand-details [brandDetailData]="brandDetailData"></app-brand-details>
+  </div>
+  <div *ngIf="!showBrandDetails">
+    <div class="d-flex flex-column bg-white rounded-2 p-4">
+      <div style="margin-bottom: 6px">
+        <h4 class="title-style">Paracetamol</h4>
+        <p class="date-style">01.01.2024-30.06.2024</p>
+      </div>
+      <div *ngIf="isShowDivisionDetails" class="mb-2">
+        <p class="loc-text">Location</p>
+        <h3 class="loc-val">
+          {{ divisionName }}
+        </h3>
+      </div>
+      <div>
+        <p class="total-sales">Total sales</p>
+        <h3 class="total-amount">৳{{ totalBdSales | number }}</h3>
+      </div>
+    </div>
+
+    <!-- tab section start -->
+    <div
+      class="d-flex flex-column bg-white rounded-2 mt-4"
+      style="padding: 10px 10px"
+    >
+      <ul
+        class="nav nav-tabs justify-content-between"
+        id="myTab"
+        role="tablist"
+      >
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="tab1-btn"
+            data-bs-toggle="tab"
+            data-bs-target="#tab1"
+            type="button"
+            role="tab"
+            aria-controls="tab1"
+            aria-selected="true"
+            (click)="onTabClick('demographic')"
+          >
+            Demographic
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="tab2-btn"
+            data-bs-toggle="tab"
+            data-bs-target="#tab2"
+            type="button"
+            role="tab"
+            aria-controls="tab2"
+            aria-selected="false"
+            [disabled]="!divisionId"
+            (click)="onTabClick('brands')"
+          >
+            Top Brands
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="tab3-btn"
+            data-bs-toggle="tab"
+            data-bs-target="#tab3"
+            type="button"
+            role="tab"
+            aria-controls="tab3"
+            aria-selected="false"
+            [disabled]="!divisionId"
+            (click)="onTabClick('market_share')"
+          >
+            Market Share
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <!-- table content here -->
+    <div
+      class="d-flex flex-column bg-white rounded-2 mt-4"
+      style="padding: 10px 10px"
+    >
+      <div class="tab-content" id="myTabContent">
+        <div
+          class="tab-pane fade show active"
+          id="tab1"
+          role="tabpanel"
+          aria-labelledby="tab1-btn"
+        >
+          <app-table
+            [tableTabType]="tableTabType"
+            [divisionsDataList]="divisionsDataList"
+            [districtDataList]="districtDataList"
+            (showDistrictsEvent)="onShowDistricts($event)"
+          ></app-table>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="tab2"
+          role="tabpanel"
+          aria-labelledby="tab2-btn"
+        >
+          <app-table
+            [tableTabType]="tableTabType"
+            [topBrandList]="topBrandList"
+            (showBrandDetailsEvent)="onShowBrandDetails($event)"
+          ></app-table>
+        </div>
+
+        <div
+          class="tab-pane fade"
+          id="tab3"
+          role="tabpanel"
+          aria-labelledby="tab3-btn"
+        >
+          <app-table
+            [tableTabType]="tableTabType"
+            [marketShareList]="marketShareList"
+          ></app-table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

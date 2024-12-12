@@ -1,0 +1,60 @@
+<div class="form-container">
+  <div class="form-background">
+    <div class="form-inner">
+      <h3 class="form-title">Sign in</h3>
+      <form [formGroup]="regForm" (ngSubmit)="onSignIn()" class="signin-form">
+        <div class="form-field">
+          <label for="userName">Enter your username or email address</label>
+          <input placeholder="Enter your username" type="text" formControlName="userName" id="userName"
+            appValidateField />
+          @if (regForm.get('userName')?.touched && regForm.get('userName')?.invalid) {
+          <div class="error-message">
+            @if (regForm.get('userName')?.errors?.['required']) {
+            <div>
+              <span>User name is required</span>
+            </div>
+            }
+            @if (regForm.get('userName')?.errors?.['validateField']) {
+            <div>
+              <span>{{ regForm.get('userName')?.errors?.['validateField'] }}</span>
+            </div>
+            }
+            @if (regForm.get('userName')?.errors?.['maxlength']) {
+            <div>
+              <span>User name must not exceed 8 characters</span>
+            </div>
+            }
+          </div>
+          }
+        </div>
+        <div class="form-field">
+          <label for="password">Enter your Password</label>
+          <input formControlName="password" type="password" name="password" id="password"
+            placeholder="Enter your password" />
+          @if (regForm.get('password')?.touched && regForm.get('password')?.invalid) {
+          <div class="error-message">
+            @if (regForm.get('password')?.errors?.['required']) {
+            <div>
+              <span>Password is required</span>
+            </div>
+            }
+            @if (regForm.get('password')?.errors?.['minlength']) {
+            <div>
+              <span>Password must be at least 6 characters long</span>
+            </div>
+            }
+          </div>
+          }
+          <div class="mb-3 d-flex justify-content-end">
+            <a routerLink="/auth/forgot-password" class="forgot-button">Forgot Password?</a>
+          </div>
+        </div>
+        <div class="d-flex justify-content-end mt-5">
+          <button type="submit" class="submit-button" [disabled]="regForm.invalid">
+            Signin
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

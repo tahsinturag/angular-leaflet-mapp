@@ -1,0 +1,70 @@
+.map-container {
+  position: relative;
+  height: 100vh;
+}
+
+.search-form-overlay {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  gap: 24px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.show-results-overlay {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  background-color: #f9f6f3;
+  padding: 16px 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  gap: 24px;
+  width: 412px;
+  opacity: 0.9;
+}
+::ng-deep .leaflet-touch .leaflet-bar {
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  background-clip: padding-box;
+  display: none;
+}
+.search-bar {
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  z-index: 1000;
+  width: 307px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 30px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  background: transparent;
+  flex-grow: 1;
+}
+
+.search-bar .icon {
+  font-size: 20px;
+  color: gray;
+}
+
+.search-bar input::placeholder {
+  color: gray;
+}

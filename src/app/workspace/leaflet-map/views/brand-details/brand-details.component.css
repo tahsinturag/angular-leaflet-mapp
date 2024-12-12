@@ -1,0 +1,23 @@
+.card {
+  background-color: white;
+  border: none;
+  border-radius: 12px;
+}
+
+.card h5 {
+  font-size: 1.25rem;
+}
+
+.card span {
+  font-size: 0.9rem;
+}
+
+.border {
+  background-color: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+.text-style {
+  font-size: 14px;
+  font-weight: 400;
+}

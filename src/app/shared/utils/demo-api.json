@@ -1,0 +1,244 @@
+{
+  "division_list": {
+    "totalBDSales": 48175,
+    "divisionSales": [
+      {
+        "divisionName": "Rajshahi",
+        "totalSales": 9725
+      },
+      {
+        "divisionName": "Khulna",
+        "totalSales": 9555
+      },
+      {
+        "divisionName": "Chittagong",
+        "totalSales": 8640
+      },
+      {
+        "divisionName": "Rangpur",
+        "totalSales": 4985
+      },
+      {
+        "divisionName": "Sylhet",
+        "totalSales": 4095
+      },
+      {
+        "divisionName": "Dhaka",
+        "totalSales": 3775
+      },
+      {
+        "divisionName": "Barishal",
+        "totalSales": 3775
+      },
+      {
+        "divisionName": "Mymensingh",
+        "totalSales": 3625
+      }
+    ]
+  },
+  "districts_coordinates": [
+    {
+      "districtName": "Dhaka",
+      "latitude": 23.8103,
+      "longitude": 90.4125
+    },
+    {
+      "districtName": "Faridpur",
+      "latitude": 23.607,
+      "longitude": 89.8429
+    },
+    {
+      "districtName": "Gazipur",
+      "latitude": 23.9999,
+      "longitude": 90.4203
+    },
+    {
+      "districtName": "Gopalganj",
+      "latitude": 23.0132,
+      "longitude": 89.8226
+    },
+    {
+      "districtName": "Kishoreganj",
+      "latitude": 24.4333,
+      "longitude": 90.9447
+    },
+    {
+      "districtName": "Madaripur",
+      "latitude": 23.164,
+      "longitude": 90.1895
+    },
+    {
+      "districtName": "Manikganj",
+      "latitude": 23.8644,
+      "longitude": 89.9878
+    },
+    {
+      "districtName": "Munshiganj",
+      "latitude": 23.5421,
+      "longitude": 90.5305
+    },
+    {
+      "districtName": "Narayanganj",
+      "latitude": 23.6238,
+      "longitude": 90.5
+    },
+    {
+      "districtName": "Narsingdi",
+      "latitude": 23.9329,
+      "longitude": 90.7181
+    },
+    {
+      "districtName": "Rajbari",
+      "latitude": 23.757,
+      "longitude": 89.6445
+    },
+    {
+      "districtName": "Shariatpur",
+      "latitude": 23.2423,
+      "longitude": 90.4342
+    },
+    {
+      "districtName": "Tangail",
+      "latitude": 24.2513,
+      "longitude": 89.9167
+    }
+  ],
+  "districtwise_search": [
+    {
+      "districtName": "Dhaka",
+      "districtSales": 820
+    },
+    {
+      "districtName": "Narsingdi",
+      "districtSales": 450
+    },
+    {
+      "districtName": "Gopalganj",
+      "districtSales": 415
+    },
+    {
+      "districtName": "Munshiganj",
+      "districtSales": 360
+    },
+    {
+      "districtName": "Narayanganj",
+      "districtSales": 350
+    },
+    {
+      "districtName": "Gazipur",
+      "districtSales": 350
+    },
+    {
+      "districtName": "Tangail",
+      "districtSales": 340
+    },
+    {
+      "districtName": "Madaripur",
+      "districtSales": 175
+    },
+    {
+      "districtName": "Rajbari",
+      "districtSales": 170
+    },
+    {
+      "districtName": "Kishoreganj",
+      "districtSales": 150
+    },
+    {
+      "districtName": "Shariatpur",
+      "districtSales": 80
+    },
+    {
+      "districtName": "Faridpur",
+      "districtSales": 65
+    },
+    {
+      "districtName": "Manikganj",
+      "districtSales": 50
+    }
+  ],
+  "top_brands": [
+    {
+      "drugName": "Napa 500 mg Ointment",
+      "strengthName": "500 mg",
+      "formationName": "Ointment",
+      "totalAmount": 40
+    }
+  ],
+  "market_share": [
+    {
+      "districtName": "Dhaka",
+      "totalSales": 820,
+      "salesPercentage": 21.7218543046358
+    },
+    {
+      "districtName": "Faridpur",
+      "totalSales": 65,
+      "salesPercentage": 1.72185430463576
+    },
+    {
+      "districtName": "Gopalganj",
+      "totalSales": 415,
+      "salesPercentage": 10.9933774834437
+    },
+    {
+      "districtName": "Narsingdi",
+      "totalSales": 450,
+      "salesPercentage": 11.9205298013245
+    },
+    {
+      "districtName": "Narayanganj",
+      "totalSales": 350,
+      "salesPercentage": 9.27152317880795
+    },
+    {
+      "districtName": "Munshiganj",
+      "totalSales": 360,
+      "salesPercentage": 9.5364238410596
+    },
+    {
+      "districtName": "Manikganj",
+      "totalSales": 50,
+      "salesPercentage": 1.32450331125828
+    },
+    {
+      "districtName": "Madaripur",
+      "totalSales": 175,
+      "salesPercentage": 4.63576158940397
+    },
+    {
+      "districtName": "Tangail",
+      "totalSales": 340,
+      "salesPercentage": 9.00662251655629
+    },
+    {
+      "districtName": "Gazipur",
+      "totalSales": 350,
+      "salesPercentage": 9.27152317880795
+    },
+    {
+      "districtName": "Rajbari",
+      "totalSales": 170,
+      "salesPercentage": 4.50331125827815
+    },
+    {
+      "districtName": "Kishoreganj",
+      "totalSales": 150,
+      "salesPercentage": 3.97350993377483
+    },
+    {
+      "districtName": "Shariatpur",
+      "totalSales": 80,
+      "salesPercentage": 2.11920529801325
+    }
+  ],
+  "drug_report": {
+    "drugName": "Paracetamol Pediatric Drops",
+    "formation": "Pediatric Drops",
+    "totalSales": 2775,
+    "highestSalesMonth": "February",
+    "lowestSalesMonth": "May",
+    "highestSalesLocation": "Jashore",
+    "lowestSalesLocation": "Faridpur"
+  }
+}

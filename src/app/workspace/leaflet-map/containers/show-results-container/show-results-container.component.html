@@ -1,0 +1,16 @@
+<app-show-results
+  [divisionName]="divisionName"
+  [isShowDivisionDetails]="isShowDivisionDetails"
+  [divisionsDataList]="divisionsDataList"
+  [districtDataList]="districtDataList"
+  [topBrandList]="topBrandList"
+  [marketShareList]="marketShareList"
+  [showBrandDetails]="showBrandDetails"
+  [brandDetailData]="brandDetailData"
+  [tableTabType]="tableTabType"
+  [totalBdSales]="totalBdSales"
+  (showDistrictsEvent)="showDistrictsHandler($event)"
+  (goBackEvent)="goBack()"
+  (tabClickEvent)="tabHandler($event)"
+  (showBrandDetailsEvent)="showBrandDetailsHandler($event)"
+></app-show-results>

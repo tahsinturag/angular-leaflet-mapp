@@ -1,0 +1,68 @@
+{
+  "divisions": [
+    {
+      "id": "1",
+      "divisionName": "Barishal",
+      "bn_name": "বরিশাল",
+      "latitude": "22.701002",
+      "longitude": "90.353451",
+      "amount": 3434344
+    },
+    {
+      "id": "2",
+      "divisionName": "Chattogram",
+      "bn_name": "চট্টগ্রাম",
+      "latitude": "22.356851",
+      "longitude": "91.783182",
+      "amount": 3434344
+    },
+    {
+      "id": "3",
+      "divisionName": "Dhaka",
+      "bn_name": "ঢাকা",
+      "latitude": "23.810332",
+      "longitude": "90.412518",
+      "amount": 3434344
+    },
+    {
+      "id": "4",
+      "divisionName": "Khulna",
+      "bn_name": "খুলনা",
+      "latitude": "22.845641",
+      "longitude": "89.540328",
+      "amount": 3434344
+    },
+    {
+      "id": "5",
+      "divisionName": "Rajshahi",
+      "bn_name": "রাজশাহী",
+      "latitude": "24.363589",
+      "longitude": "88.624135",
+      "amount": 3434344
+    },
+    {
+      "id": "6",
+      "divisionName": "Rangpur",
+      "bn_name": "রংপুর",
+      "latitude": "25.743892",
+      "longitude": "89.275227",
+      "amount": 3434344
+    },
+    {
+      "id": "7",
+      "divisionName": "Sylhet",
+      "bn_name": "সিলেট",
+      "latitude": "24.894929",
+      "longitude": "91.868706",
+      "amount": 3434344
+    },
+    {
+      "id": "8",
+      "divisionName": "Mymensingh",
+      "bn_name": "ময়মনসিংহ",
+      "latitude": "24.747149",
+      "longitude": "90.420273",
+      "amount": 3434344
+    }
+  ]
+}

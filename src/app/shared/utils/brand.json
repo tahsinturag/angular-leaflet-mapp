@@ -1,0 +1,105 @@
+{
+  "brands": [
+    {
+      "id": "1",
+      "name": "Napa 500 mg",
+      "amount": 3434344
+    },
+    {
+      "id": "2",
+      "name": "Napa Extend 665 mg",
+      "amount": 3434344
+    },
+    {
+      "id": "3",
+      "name": "Napa One 1000 mg",
+      "amount": 3434344
+    },
+    {
+      "id": "4",
+      "name": "Napa One 500 mg",
+      "amount": 3434344
+    },
+    {
+      "id": "5",
+      "name": "Ace 500 mg",
+      "amount": 3434344
+    },
+    {
+      "id": "6",
+      "name": "Renova XR 665 mg",
+      "amount": 3434344
+    },
+    {
+      "id": "7",
+      "name": "Napa 80 mg/ml",
+      "amount": 3434344
+    }
+  ],
+  "market_shares": [
+    {
+      "id": "1",
+      "name": "Barishal",
+      "bn_name": "বরিশাল",
+      "lat": "22.701002",
+      "long": "90.353451",
+      "amount": 23.23
+    },
+    {
+      "id": "2",
+      "name": "Chattogram",
+      "bn_name": "চট্টগ্রাম",
+      "lat": "22.356851",
+      "long": "91.783182",
+      "amount": 12.23
+    },
+    {
+      "id": "3",
+      "name": "Dhaka",
+      "bn_name": "ঢাকা",
+      "lat": "23.810332",
+      "long": "90.412518",
+      "amount": 344.23
+    },
+    {
+      "id": "4",
+      "name": "Khulna",
+      "bn_name": "খুলনা",
+      "lat": "22.845641",
+      "long": "89.540328",
+      "amount": 43.23
+    },
+    {
+      "id": "5",
+      "name": "Rajshahi",
+      "bn_name": "রাজশাহী",
+      "lat": "24.363589",
+      "long": "88.624135",
+      "amount": 22.23
+    },
+    {
+      "id": "6",
+      "name": "Rangpur",
+      "bn_name": "রংপুর",
+      "lat": "25.743892",
+      "long": "89.275227",
+      "amount": 11.23
+    },
+    {
+      "id": "7",
+      "name": "Sylhet",
+      "bn_name": "সিলেট",
+      "lat": "24.894929",
+      "long": "91.868706",
+      "amount": 2.89
+    },
+    {
+      "id": "8",
+      "name": "Mymensingh",
+      "bn_name": "ময়মনসিংহ",
+      "lat": "24.747149",
+      "long": "90.420273",
+      "amount": 6.98
+    }
+  ]
+}

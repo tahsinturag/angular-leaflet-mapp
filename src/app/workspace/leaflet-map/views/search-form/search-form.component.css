@@ -1,0 +1,97 @@
+#map {
+  height: 100vh;
+  width: 100%;
+}
+
+.search-bar {
+  position: absolute;
+  top: -3px;
+  left: -20px;
+  z-index: 1000;
+  width: 300px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 30px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  background: transparent;
+  flex-grow: 1;
+}
+
+.search-bar .icon {
+  font-size: 20px;
+  color: gray;
+}
+
+.search-bar input::placeholder {
+  color: gray;
+}
+
+::ng-deep .modal-header {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+::ng-deep .modal-content {
+  border-radius: 12px;
+  background-color: #f2f8ef;
+}
+
+.search-form {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 307px;
+  background-color: #f9f6f3;
+  opacity: 0.9;
+  border: 1px solid #ffffff80;
+  border-radius: 12px;
+  padding: 16px;
+}
+.search-form .form-input {
+  border-radius: 12px;
+  border: 1px solid #80808080;
+  padding: 10px 8px 10px 13px;
+}
+.search-form input::placeholder {
+  color: #d9d9d9;
+  font-size: 12px;
+  font-weight: 400;
+}
+.header-icon {
+  display: flex;
+  justify-content: space-between;
+}
+::ng-deep .modal {
+  position: relative;
+}
+::ng-deep .modal-backdrop.show {
+  opacity: 0;
+}
+/* ::ng-deep .modal.show .modal-dialog {
+  transform: 0;
+} */
+::ng-deep .modal-dialog {
+  margin-right: auto;
+  margin-left: 0;
+  margin-top: 0;
+}
+.search-form .form-control:focus {
+  color: var(--bs-body-color);
+  background-color: #ffffff;
+  border-color: #80808080;
+  outline: 0;
+  box-shadow: none !important;
+}
+.search-form input {
+  border: none;
+  outline: none;
+  background: #ffffff;
+  flex-grow: 1;
+}

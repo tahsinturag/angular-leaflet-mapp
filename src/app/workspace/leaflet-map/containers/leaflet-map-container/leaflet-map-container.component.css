@@ -1,70 +1,89 @@
+/* Purpose of this CSS file:
+   This file styles a map page that has:
+   1. A main map that takes up the whole screen
+   2. A search bar at the top-left
+   3. A results panel on the right side
+   4. Some special map controls
+*/
+
+/* Makes the map fill the entire screen height */
 .map-container {
   position: relative;
-  height: 100vh;
+  height: 100vh; /* vh means viewport height - uses full screen height */
 }
 
+/* Styles for the search form that floats on top of the map */
 .search-form-overlay {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  z-index: 1000;
-  /* background-color: rgba(255, 255, 255, 0.8); */
+  position: absolute; /* This makes it float over the map */
+  top: 10px; /* Places it 10px from the top */
+  left: 10px; /* Places it 10px from the left */
+  z-index: 1000; /* Makes sure it stays on top of other elements */
   padding: 16px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  gap: 24px;
+  border-radius: 12px; /* Makes corners rounded */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+  gap: 24px; /* Spaces items inside by 24px */
 }
 
+/* General container for organizing items in a column */
 .container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
+  flex-direction: column; /* Stacks items vertically */
+  align-items: center; /* Centers items horizontally */
+  gap: 20px; /* Spaces items by 20px */
 }
+
+/* Panel that shows search results on the right side */
 .show-results-overlay {
   position: absolute;
   top: 10px;
   right: 10px;
   z-index: 1000;
-  background-color: #f9f6f3;
+  background-color: #f9f6f3; /* Light beige background */
   padding: 16px 16px;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   gap: 24px;
   width: 412px;
-  opacity: 0.9;
+  opacity: 0.9; /* Makes it slightly see-through */
 }
+
+/* Hides the default Leaflet map controls */
 ::ng-deep .leaflet-touch .leaflet-bar {
   border: 2px solid rgba(0, 0, 0, 0.2);
   background-clip: padding-box;
-  display: none;
+  display: none; /* Makes the control invisible */
 }
+
+/* Styles for the main search bar */
 .search-bar {
   position: absolute;
   top: 10px;
   left: 0px;
   z-index: 1000;
   width: 307px;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.9); /* Almost white background */
+  border-radius: 30px; /* Makes it very rounded */
   padding: 10px 20px;
   display: flex;
   align-items: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Removes default styling from the search input */
 .search-bar input {
   border: none;
   outline: none;
   background: transparent;
-  flex-grow: 1;
+  flex-grow: 1; /* Makes input take up remaining space */
 }
 
+/* Styles the search icon */
 .search-bar .icon {
   font-size: 20px;
   color: gray;
 }
 
+/* Styles the placeholder text in the search input */
 .search-bar input::placeholder {
   color: gray;
 }

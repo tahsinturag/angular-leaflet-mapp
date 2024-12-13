@@ -1,28 +1,49 @@
+/*
+  Purpose: This CSS file styles a map and its popup elements using Leaflet map library
+  
+*/
+
+/* Sets the map container size - makes it take full width and fixed height */
 #map {
   height: 900px;
   width: 100%;
 }
+
+/* 
+  POPUP STYLING SECTION
+  The following styles customize how popups look on the map
+*/
 ::ng-deep .leaflet-popup-content {
   margin: 0;
 }
+
+/* Makes popups dark-themed with white text */
 ::ng-deep .popover {
   border: none !important;
   background-color: #000;
   color: #fff;
 }
+
+/* Hides the default close (X) button on popups */
 ::ng-deep .leaflet-container a.leaflet-popup-close-button {
   display: none;
 }
+
+/* Centers text inside popups and makes it white */
 ::ng-deep .leaflet-popup-content p {
   margin: 0;
   text-align: center;
   color: #fff;
 }
+
+/* Styles the popup box and its shadow */
 ::ng-deep .leaflet-popup-content-wrapper,
 .leaflet-popup-tip {
   background: #000;
   box-shadow: 0 3px 14px rgba(0, 0, 0, 0.4);
 }
+
+/* Styles the little arrow at the bottom of popups */
 ::ng-deep .leaflet-popup-tip {
   background: #000;
   color: #000;

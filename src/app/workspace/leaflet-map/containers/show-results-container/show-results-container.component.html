@@ -1,16 +1,20 @@
-<app-show-results
-  [divisionName]="divisionName"
-  [isShowDivisionDetails]="isShowDivisionDetails"
-  [divisionsDataList]="divisionsDataList"
-  [districtDataList]="districtDataList"
-  [topBrandList]="topBrandList"
-  [marketShareList]="marketShareList"
-  [showBrandDetails]="showBrandDetails"
-  [brandDetailData]="brandDetailData"
-  [tableTabType]="tableTabType"
-  [totalBdSales]="totalBdSales"
-  (showDistrictsEvent)="showDistrictsHandler($event)"
-  (goBackEvent)="goBack()"
-  (tabClickEvent)="tabHandler($event)"
-  (showBrandDetailsEvent)="showBrandDetailsHandler($event)"
-></app-show-results>
+<!--
+  Purpose: This is a container component that shows sales results on a map
+  
+  What it does:
+  1. Shows division and district information
+  2. Displays top brands and their market share
+  3. Shows detailed information about selected brands
+  4. Has tabs to switch between different views
+  
+  How it works:
+  - Gets data from parent component (like division names, brand lists)
+  - Sends back user actions (like when someone clicks on districts or brands)
+-->
+
+<app-show-results [divisionName]="divisionName" [isShowDivisionDetails]="isShowDivisionDetails"
+  [divisionsDataList]="divisionsDataList" [districtDataList]="districtDataList" [topBrandList]="topBrandList"
+  [marketShareList]="marketShareList" [showBrandDetails]="showBrandDetails" [brandDetailData]="brandDetailData"
+  [tableTabType]="tableTabType" [totalBdSales]="totalBdSales" (showDistrictsEvent)="showDistrictsHandler($event)"
+  (goBackEvent)="goBack()" (tabClickEvent)="tabHandler($event)"
+  (showBrandDetailsEvent)="showBrandDetailsHandler($event)"></app-show-results>

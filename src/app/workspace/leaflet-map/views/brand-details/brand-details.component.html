@@ -1,30 +1,40 @@
+<!-- 
+  Purpose: This component shows detailed information about a medicine brand
+  - Shows the medicine name, type, and total sales amount
+  - Displays where the medicine sells best and worst (by location)
+  - Shows which months had the highest and lowest sales
+-->
+
+<!-- Main container with medicine name and sales info -->
 <div class="mt-0 d-flex justify-content-center">
   <div class="w-100">
-    <div
-      class="border rounded p-2 mb-4 d-flex justify-content-between flex-row gap-2 align-items-center"
-      style="background-color: #ffffff; padding: 10px"
-    >
+    <!-- Top section: Medicine name, type and total sales amount -->
+    <div class="border rounded p-2 mb-4 d-flex justify-content-between flex-row gap-2 align-items-center"
+      style="background-color: #ffffff; padding: 10px">
       <div class="d-flex flex-column">
         <h5 class="mb-1">{{ brandDetailData.drugName }}</h5>
         <span class="text-muted">{{ brandDetailData.formation }}</span>
       </div>
       <h4 class="mt-2 fw-bold">৳ {{ brandDetailData.totalSales | number }}</h4>
     </div>
+
+    <!-- Middle section: Best and worst performing locations -->
     <div class="border rounded p-2 mb-2">
       <div class="d-flex justify-content-between">
         <span class="text-style">Highest sales in</span>
         <span class="text-style">{{
           brandDetailData.highestSalesLocation
-        }}</span>
+          }}</span>
       </div>
       <div class="d-flex justify-content-between">
         <span class="text-style">Lowest sales in</span>
         <span class="text-style">{{
           brandDetailData.lowestSalesLocation
-        }}</span>
+          }}</span>
       </div>
     </div>
 
+    <!-- Bottom section: Best and worst performing months -->
     <div class="border rounded p-2 mb-2">
       <div class="d-flex justify-content-between">
         <span>Best Performance in</span>

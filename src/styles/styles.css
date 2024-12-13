@@ -1,5 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+/*
+Purpose of this file:
+This is the main style file that controls how things look on our website.
+It handles things like how input boxes and buttons appear.
+*/
+
+/* This was for adding map styles, but we're not using it right now */
 /* @import "~leaflet/dist/leaflet.css"; */
+
+/* Makes input boxes look nice when clicked */
+/* Removes the blue glow and keeps a simple gray border */
 .form-control:focus {
   color: var(--bs-body-color);
   background-color: #ffffff;
@@ -7,12 +16,24 @@
   outline: 0;
   box-shadow: none !important;
 }
+
+/* Makes all input boxes clean and simple */
+/* - No borders
+  - No outline when clicked
+  - White background
+  - Takes up available space */
 input {
   border: none;
   outline: none;
   background: #ffffff;
   flex-grow: 1;
 }
+
+/* Styles for the 'X' (clear) button */
+/* - Puts it on the right side
+  - Centers it vertically
+  - Makes it gray
+  - Makes the cursor a pointer when hovering */
 .clear-btn {
   position: absolute;
   right: 10px;
@@ -25,6 +46,7 @@ input {
   color: #888;
 }
 
+/* Makes the 'X' button turn black when mouse hovers over it */
 .clear-btn:hover {
   color: #000;
 }

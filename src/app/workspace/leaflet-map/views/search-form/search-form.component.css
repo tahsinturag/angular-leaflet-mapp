@@ -1,8 +1,27 @@
+/*
+PURPOSE OF THIS FILE:
+This CSS file styles a map application with a search feature.
+It contains styles for:
+1. Map container
+2. Search bar with a clean, modern design
+3. Modal popup window
+4. Search form with input fields
+*/
+
+/* MAP STYLES
+   Makes the map fill the entire screen view
+*/
 #map {
   height: 100vh;
   width: 100%;
 }
 
+/* SEARCH BAR STYLES
+   Creates a floating search bar on top of the map
+   - White, semi-transparent background
+   - Rounded corners and subtle shadow
+   - Positioned at the top-left
+*/
 .search-bar {
   position: absolute;
   top: -3px;
@@ -33,6 +52,13 @@
   color: gray;
 }
 
+/* MODAL POPUP STYLES
+   Styles for the popup window that appears
+   - Custom rounded corners
+   - Light green background
+   - Appears from the left side
+   - No dark overlay background
+*/
 ::ng-deep .modal-header {
   padding-bottom: 0;
   border-bottom: none;
@@ -43,6 +69,27 @@
   background-color: #f2f8ef;
 }
 
+::ng-deep .modal {
+  position: relative;
+}
+
+::ng-deep .modal-backdrop.show {
+  opacity: 0;
+}
+
+::ng-deep .modal-dialog {
+  margin-right: auto;
+  margin-left: 0;
+  margin-top: 0;
+}
+
+/* SEARCH FORM STYLES
+   Main search form container and its elements
+   - Light beige background
+   - Rounded corners and borders
+   - Clean input field styling
+   - Proper spacing and layout
+*/
 .search-form {
   position: absolute;
   left: 0px;
@@ -54,34 +101,24 @@
   border-radius: 12px;
   padding: 16px;
 }
+
 .search-form .form-input {
   border-radius: 12px;
   border: 1px solid #80808080;
   padding: 10px 8px 10px 13px;
 }
+
 .search-form input::placeholder {
   color: #d9d9d9;
   font-size: 12px;
   font-weight: 400;
 }
+
 .header-icon {
   display: flex;
   justify-content: space-between;
 }
-::ng-deep .modal {
-  position: relative;
-}
-::ng-deep .modal-backdrop.show {
-  opacity: 0;
-}
-/* ::ng-deep .modal.show .modal-dialog {
-  transform: 0;
-} */
-::ng-deep .modal-dialog {
-  margin-right: auto;
-  margin-left: 0;
-  margin-top: 0;
-}
+
 .search-form .form-control:focus {
   color: var(--bs-body-color);
   background-color: #ffffff;
@@ -89,6 +126,7 @@
   outline: 0;
   box-shadow: none !important;
 }
+
 .search-form input {
   border: none;
   outline: none;

@@ -1,60 +1,17 @@
-<!-- <div class="container mt-1 search-form">
-  <div class="modal-header header-icon mb-3">
-    <h5 class="modal-title" id="searchModalLabel">Search</h5>
-    <i
-      class="fas fa-chevron-up"
-      style="cursor: pointer"
-      (click)="onClose()"
-    ></i>
-  </div>
-  <form [formGroup]="searchForm" (ngSubmit)="onSearch()">
-    <div class="mb-3">
-      <label for="genericBrand" class="form-label">Generic/Brand</label>
-      <input
-        type="text"
-        class="form-control form-input"
-        id="genericBrand"
-        formControlName="brand_name"
-        placeholder="Search by generic/brand..."
-        appClearInput
-      />
-    </div>
-    <div class="mb-3">
-      <label for="vendor" class="form-label">Vendor</label>
-      <input
-        type="text"
-        class="form-control form-input"
-        id="vendor"
-        formControlName="vendor_name"
-        placeholder="Search by location..."
-        appClearInput
-      />
-    </div>
-    <div class="mb-3">
-      <label for="startDate" class="form-label">Start date</label>
-      <input
-        type="date"
-        formControlName="start_date"
-        class="form-control form-input"
-        id="startDate"
-        appClearInput
-      />
-    </div>
-    <div class="mb-3">
-      <label for="endDate" class="form-label">End date</label>
-      <input
-        type="date"
-        formControlName="end_date"
-        class="form-control form-input"
-        id="endDate"
-        appClearInput
-      />
-    </div>
-    <button type="submit" class="btn btn-success w-100">
-      <i class="fas fa-search"></i> Search
-    </button>
-  </form>
-</div> -->
+<!--
+  Purpose: This is a search form that helps users find medicine information
+  It has 4 main parts:
+  1. Generic/Brand search box - To search for medicine names
+  2. Vendor search box - To search for medicine sellers/companies
+  3. Start Date picker - To choose when to start looking for data
+  4. End Date picker - To choose when to stop looking for data
+
+  Cool features:
+  - Both search boxes show suggestions from api
+  - All fields can be cleared easily
+-->
+
+
 
 <!--using bootstrap autocomplete-->
 <!--for generic/brand-->
@@ -63,24 +20,12 @@
     <div class="mb-3">
       <label for="genericBrand" class="form-label">Generic/Brand</label>
       <div class="dropdown">
-        <input
-          type="text"
-          class="form-control form-input dropdown-toggle"
-          id="genericBrand"
-          formControlName="genericId"
-          placeholder="Search by generic/brand..."
-          autocomplete="off"
-          (focus)="showSuggestion = suggestions.length > 0"
-          (blur)="onBlur('generic')"
-          appClearInput
-        />
+        <input type="text" class="form-control form-input dropdown-toggle" id="genericBrand" formControlName="genericId"
+          placeholder="Search by generic/brand..." autocomplete="off" (focus)="showSuggestion = suggestions.length > 0"
+          (blur)="onBlur('generic')" appClearInput />
         <div class="dropdown-menu" [class.show]="showSuggestion">
           @for (suggestion of suggestions; track suggestion) {
-          <a
-            class="dropdown-item"
-            href="javascript:void(0)"
-            (click)="selectSuggestion(suggestion)"
-          >
+          <a class="dropdown-item" href="javascript:void(0)" (click)="selectSuggestion(suggestion)">
             {{ suggestion.genericName }}
           </a>
           }
@@ -92,24 +37,12 @@
     <div class="mb-3">
       <label for="vendor" class="form-label">Vendor</label>
       <div class="dropdown">
-        <input
-          type="text"
-          class="form-control form-input dropdown-toggle"
-          id="vendor"
-          formControlName="vendorId"
-          placeholder="Search by vendor..."
-          autocomplete="off"
-          (focus)="showVendorSuggestion = vendorSuggestions.length > 0"
-          (blur)="onBlur('vendor')"
-          appClearInput
-        />
+        <input type="text" class="form-control form-input dropdown-toggle" id="vendor" formControlName="vendorId"
+          placeholder="Search by vendor..." autocomplete="off"
+          (focus)="showVendorSuggestion = vendorSuggestions.length > 0" (blur)="onBlur('vendor')" appClearInput />
         <div class="dropdown-menu" [class.show]="showVendorSuggestion">
           @for (suggestion of vendorSuggestions; track suggestion) {
-          <a
-            class="dropdown-item"
-            href="javascript:void(0)"
-            (click)="selectVendorSuggestion(suggestion)"
-          >
+          <a class="dropdown-item" href="javascript:void(0)" (click)="selectVendorSuggestion(suggestion)">
             {{ suggestion.vendorName }}
           </a>
           }
@@ -119,23 +52,11 @@
 
     <div class="mb-3">
       <label for="startDate" class="form-label">Start date</label>
-      <input
-        type="date"
-        formControlName="startDate"
-        class="form-control form-input"
-        id="startDate"
-        appClearInput
-      />
+      <input type="date" formControlName="startDate" class="form-control form-input" id="startDate" appClearInput />
     </div>
     <div class="mb-3">
       <label for="endDate" class="form-label">End date</label>
-      <input
-        type="date"
-        formControlName="endDate"
-        class="form-control form-input"
-        id="endDate"
-        appClearInput
-      />
+      <input type="date" formControlName="endDate" class="form-control form-input" id="endDate" appClearInput />
     </div>
     <button type="submit" class="btn btn-success w-100">
       <i class="fas fa-search"></i> Search

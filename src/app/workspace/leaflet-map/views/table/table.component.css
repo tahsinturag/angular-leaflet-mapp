@@ -1,12 +1,21 @@
+/* Purpose: This CSS file styles a table to make it look neat and organized
+   Why: We need to make our table look professional and easy to read */
+
+/* Makes the bottom border of the last row in the table white
+   This helps the table blend with a white background */
 table tbody tr:last-child {
   border-bottom: white;
 }
+
+/* Makes the text in the last column of the table header align to the right
+     This helps organize numbers or actions that are usually in the last column */
 table thead tr th:last-child {
   text-align: right;
 }
+
 .table-title {
-  /* text-align: right; */
-  font-size: 14px;
-  font-weight: 400;
-  color: #282b31;
+  /* text-align: right;  
+    font-size: 14px;          
+    font-weight: 400;         /* Makes the text slightly bold */
+  color: #282b31; /* Makes the text a dark gray color */
 }

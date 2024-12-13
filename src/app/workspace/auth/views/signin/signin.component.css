@@ -1,103 +1,129 @@
+/* This is a sign-in page style file
+   Purpose: Makes the login form look nice and responsive
+   - Creates a form with a background image
+   - Centers everything on the page
+   - Makes it work well on both computers and phones
+*/
+
+/* Basic page setup - removes extra space and sets the font */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
 }
 
+/* Main container that holds everything */
 .container {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Stacks items top to bottom */
 }
 
+/* Container for the form - centers it and adds background image */
 .form-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
   flex-grow: 1;
   padding-top: 48px;
   padding-bottom: 24px;
+  /* Adds the background image and makes sure it looks good */
   background-image: url("../../../../../assets/images/signin_bg.png");
   background-repeat: no-repeat;
   background-size: contain;
-  min-height: 100vh;
+  min-height: 100vh; /* Makes it full screen height */
   background-position: center center;
 }
 
+/* The gray box that contains the form */
 .form-background {
   width: 100%;
-  max-width: 560px;
-  background-color: #e2e3e3;
-  border-radius: 14px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 560px; /* Stops the form from getting too wide */
+  background-color: #e2e3e3; /* Light gray color */
+  border-radius: 14px; /* Rounds the corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
   padding: 24px;
 }
 
+/* Space for the form content */
 .form-inner {
-  /* padding: 0 48px 24px; */
+  /* padding: 0 48px 24px; */ /* Currently not used */
 }
 
+/* Style for the "Sign In" title */
 .form-title {
   display: block;
-  margin-bottom: 15px;
-  font-size: 48px;
-  color: #282b31;
-  font-weight: 700;
+  font-size: 48px; /* Makes the text big */
+  color: #282b31; /* Dark gray color */
+  font-weight: 700; /* Makes text bold */
   text-align: left;
   margin-bottom: 48px;
 }
+
+/* Style for the placeholder text in input boxes */
 .form-field input::placeholder {
-  color: #d9d9d9;
+  color: #d9d9d9; /* Light gray color */
   font-size: 14px;
   font-weight: 400;
 }
+
+/* Style for each input field section */
 .form-field {
-  margin-bottom: 24px;
+  margin-bottom: 24px; /* Adds space between fields */
 }
 
+/* Style for input field labels */
 .form-field label {
   display: block;
   margin-bottom: 8px;
   font-weight: bold;
 }
 
+/* Style for input boxes */
 .form-field input {
   width: 100%;
   padding: 20px 8px 20px 13px;
-  border: 1px solid #80808080;
-  border-radius: 12px;
+  border: 1px solid #80808080; /* Gray border */
+  border-radius: 12px; /* Rounds the corners */
 }
+
+/* Style for "Forgot Password" link */
 .forgot-button {
-  color: #343aa8;
+  color: #343aa8; /* Blue color */
   font-size: 16px;
   font-weight: 400;
 }
+
+/* Style for error messages (like "wrong password") */
 .error-message {
   color: red;
   font-size: 0.9em;
   margin-top: 8px;
 }
 
+/* Style for the Submit button */
 .submit-button {
   width: 180px;
   padding: 23px 12px;
-  background-color: #34a853;
+  background-color: #34a853; /* Green color */
   color: white;
   border: none;
   border-radius: 12px;
-  cursor: pointer;
+  cursor: pointer; /* Shows hand cursor on hover */
 }
 
+/* Style for disabled Submit button */
 .submit-button:disabled {
-  background-color: #cccccc;
-  cursor: not-allowed;
+  background-color: #cccccc; /* Gray color */
+  cursor: not-allowed; /* Shows "not allowed" cursor */
 }
 
+/* Special rules for small screens (like phones) */
 @media (max-width: 600px) {
   .form-background {
-    max-width: 95%;
+    max-width: 95%; /* Uses most of the screen width */
     margin: 0 10px;
   }
 
   .form-inner {
-    padding: 0 24px 24px;
+    padding: 0 24px 24px; /* Adds some space inside */
   }
 }

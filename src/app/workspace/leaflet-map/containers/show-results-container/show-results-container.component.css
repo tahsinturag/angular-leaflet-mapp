@@ -1,50 +1,79 @@
+/*
+Purpose of this file:
+This CSS file styles a results display container that shows map-related information.
+It controls how tabs, titles, dates, locations, and sales numbers look on the page.
+
+Main colors used:
+- Gray text: #808080
+- Dark text: #282b31
+- White background for active tabs
+*/
+
+/* Remove borders from the tab navigation */
 ::ng-deep .nav-tabs {
   --bs-nav-tabs-border-width: 0;
   --bs-nav-tabs-border-color: 0;
 }
+
+/* Style for regular tab links - making them gray and medium-sized */
 ::ng-deep .nav-link {
   color: #808080;
   font-size: 14px;
   font-weight: 400;
 }
+
+/* Make the active/selected tab bold */
 ::ng-deep .nav-tabs .nav-link.active {
   font-weight: 700;
   font-size: 14px;
 }
+
+/* When hovering over tabs, make them black */
 ::ng-deep .nav-tabs .nav-link:hover {
   color: #000;
 }
 
+/* Style for main titles in the container */
 .title-style {
   color: #282b31;
   font-weight: 500;
   font-size: 14px;
   margin-bottom: 3px;
 }
+
+/* Style for dates - small gray text */
 .date-style {
   color: #808080;
   font-weight: 400;
   font-size: 12px;
   margin-bottom: 0px;
 }
+
+/* Style for location labels - small gray text */
 .loc-text {
   color: #808080;
   font-weight: 400;
   font-size: 12px;
   margin-bottom: 3px;
 }
+
+/* Style for location values - big bold numbers */
 .loc-val {
   color: #282b31;
   font-weight: 700;
   font-size: 20px;
   margin: 0px;
 }
+
+/* Style for "Total Sales" label - small gray text */
 .total-sales {
   color: #808080;
   font-weight: 400;
   font-size: 12px;
   margin-bottom: 6px;
 }
+
+/* Style for total amount numbers - big bold numbers */
 .total-amount {
   color: #282b31;
   font-weight: 700;

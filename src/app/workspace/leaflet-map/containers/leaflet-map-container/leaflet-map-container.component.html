@@ -1,41 +1,40 @@
-<div class="map-container">
-  <app-map
-    [divisionsDataList]="divisionsDataList"
-    [districtDataList]="districtDataList"
-    [isShowDivisionDetails]="isShowDivisionDetails"
-    (showDistrictsEvent)="getDistrictCoordinates($event)"
-  />
+<!-- This is the main container for our interactive map application -->
+<!-- Purpose: Shows a map of Bangladesh with search and details features -->
+<!-- Why: To help users explore different regions and their information -->
 
+<div class="map-container">
+  <!-- The actual map component that shows Bangladesh -->
+  <!-- It can show divisions and districts on the map -->
+  <app-map [divisionsDataList]="divisionsDataList" [districtDataList]="districtDataList"
+    [isShowDivisionDetails]="isShowDivisionDetails" (showDistrictsEvent)="getDistrictCoordinates($event)" />
+
+  <!-- Search section that appears on top of the map -->
   <div class="search-form-overlay">
+    <!-- If search form is closed, show a simple search bar -->
     @if (!isOpenSearchForm) {
     <div class="search-bar" id="searchBar">
+      <!-- Clicking this input opens the search form -->
       <input type="text" placeholder="Search" readonly (click)="openModal()" />
+      <!-- Search icon for better visual understanding -->
       <i class="fas fa-search"></i>
     </div>
     } @else {
-    <app-search-form-container
-      (closeModalEmiter)="closeModal()"
-      (searchParamEmiter)="searchHandler($event)"
-    ></app-search-form-container>
+    <!-- If search form is open, show the full search form -->
+    <app-search-form-container (closeModalEmiter)="closeModal()"
+      (searchParamEmiter)="searchHandler($event)"></app-search-form-container>
     }
   </div>
 
+  <!-- Results section that shows after searching -->
   @if(isShowResults) {
-
   <div class="show-results-overlay">
-    <app-show-results-container
-      [divisionName]="divisionName"
-      [isShowDivisionDetails]="isShowDivisionDetails"
-      [divisionsDataList]="divisionsDataList"
-      [districtDataList]="districtDataList"
-      [topBrandList]="topBrandList"
-      [marketShareList]="marketShareList"
-      [searchParamData]="searchParamData"
-      [totalBdSales]="totalBdSales"
-      (showDistrictsEvent)="getDistrictCoordinates($event)"
-      (goBackEvent)="showPreviousData($event)"
-      (tabClickEvent)="getTabWiseData($event)"
-    ></app-show-results-container>
+    <!-- Component that displays all the search results -->
+    <!-- Shows information about divisions, districts, brands, and market share -->
+    <app-show-results-container [divisionName]="divisionName" [isShowDivisionDetails]="isShowDivisionDetails"
+      [divisionsDataList]="divisionsDataList" [districtDataList]="districtDataList" [topBrandList]="topBrandList"
+      [marketShareList]="marketShareList" [searchParamData]="searchParamData" [totalBdSales]="totalBdSales"
+      (showDistrictsEvent)="getDistrictCoordinates($event)" (goBackEvent)="showPreviousData($event)"
+      (tabClickEvent)="getTabWiseData($event)"></app-show-results-container>
   </div>
   }
 </div>

@@ -1,54 +1,73 @@
+<!-- This is a Sign In form that lets users log into the application -->
+<!-- It has two main input fields: username/email and password -->
+<!-- The form checks if the information is entered correctly -->
+
+<!-- Main container that holds the entire form -->
 <div class="form-container">
   <div class="form-background">
     <div class="form-inner">
+      <!-- Form title -->
       <h3 class="form-title">Sign in</h3>
+
+      <!-- The actual form that collects user information -->
+      <!-- [formGroup]="regForm" connects this form to TypeScript code -->
+      <!-- (ngSubmit)="onSignIn()" runs when user clicks the Sign in button -->
       <form [formGroup]="regForm" (ngSubmit)="onSignIn()" class="signin-form">
+
+        <!-- Username/Email Input Section -->
         <div class="form-field">
           <label for="userName">Enter your username or email address</label>
           <input placeholder="Enter your username" type="text" formControlName="userName" id="userName"
             appValidateField />
+
+          <!-- Error messages for username field -->
+          <!-- These only show up when there's a problem with what user typed -->
           @if (regForm.get('userName')?.touched && regForm.get('userName')?.invalid) {
           <div class="error-message">
+            <!-- Shows if user didn't type anything -->
             @if (regForm.get('userName')?.errors?.['required']) {
-            <div>
-              <span>User name is required</span>
-            </div>
+            <div><span>User name is required</span></div>
             }
+            <!-- Shows if username doesn't match required format -->
             @if (regForm.get('userName')?.errors?.['validateField']) {
-            <div>
-              <span>{{ regForm.get('userName')?.errors?.['validateField'] }}</span>
-            </div>
+            <div><span>{{ regForm.get('userName')?.errors?.['validateField'] }}</span></div>
             }
+            <!-- Shows if username is too long -->
             @if (regForm.get('userName')?.errors?.['maxlength']) {
-            <div>
-              <span>User name must not exceed 8 characters</span>
-            </div>
+            <div><span>User name must not exceed 8 characters</span></div>
             }
           </div>
           }
         </div>
+
+        <!-- Password Input Section -->
         <div class="form-field">
           <label for="password">Enter your Password</label>
           <input formControlName="password" type="password" name="password" id="password"
             placeholder="Enter your password" />
+
+          <!-- Error messages for password field -->
           @if (regForm.get('password')?.touched && regForm.get('password')?.invalid) {
           <div class="error-message">
+            <!-- Shows if user didn't type a password -->
             @if (regForm.get('password')?.errors?.['required']) {
-            <div>
-              <span>Password is required</span>
-            </div>
+            <div><span>Password is required</span></div>
             }
+            <!-- Shows if password is too short -->
             @if (regForm.get('password')?.errors?.['minlength']) {
-            <div>
-              <span>Password must be at least 6 characters long</span>
-            </div>
+            <div><span>Password must be at least 6 characters long</span></div>
             }
           </div>
           }
+
+          <!-- Forgot Password Link -->
           <div class="mb-3 d-flex justify-content-end">
             <a routerLink="/auth/forgot-password" class="forgot-button">Forgot Password?</a>
           </div>
         </div>
+
+        <!-- Submit Button Section -->
+        <!-- Button is disabled if form has any errors -->
         <div class="d-flex justify-content-end mt-5">
           <button type="submit" class="submit-button" [disabled]="regForm.invalid">
             Signin

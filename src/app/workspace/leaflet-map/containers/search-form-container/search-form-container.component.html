@@ -1,4 +1,8 @@
-<app-search-form
-  (searchParamEmitter)="searchHandler($event)"
-  (close)="closeModal()"
-></app-search-form>
+<!-- Purpose: This file shows a search form on the map
+     Why: We need this to let users search for places or things on the map -->
+
+<!-- This line adds a search form to our page -->
+<!-- It has two special features: -->
+<!--   1. When someone searches something (searchParamEmitter), it runs the searchHandler function -->
+<!--   2. When someone clicks close (close), it runs the closeModal function to hide the form -->
+<app-search-form (searchParamEmitter)="searchHandler($event)" (close)="closeModal()"></app-search-form>

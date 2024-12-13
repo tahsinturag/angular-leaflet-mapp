@@ -1,19 +1,31 @@
+<!-- This is the main HTML file for our map website using Leaflet (a library for interactive maps) -->
+<!-- Think of this file as the container that holds our entire website -->
+
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <title>LeafletMap</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-   <link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-        rel="stylesheet"/>
-  <script crossorigin=""
-          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-          src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!-- Basic settings for our website -->
+  <meta charset="utf-8"> <!-- Tells the browser how to read text -->
+  <title>LeafletMap</title> <!-- The name that appears on the browser tab -->
+  <base href="/"> <!-- Helps the browser find files on our website -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Makes our website look good on phones -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico"> <!-- The small icon that shows in the browser tab -->
+
+  <!-- Loading Leaflet map tools -->
+  <!-- Just like we need art supplies for drawing, we need these files to create maps -->
+  <link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" rel="stylesheet" />
+  <!-- This loads the map's styling (colors, shapes, etc.) -->
+
+  <script crossorigin="" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script> <!-- This loads the map's functions -->
 </head>
+
 <body>
+  <!-- This is where our map will actually show up -->
+  <!-- app-root is like a special container where Angular (our website framework) will put all our map content -->
   <app-root></app-root>
 </body>
+
 </html>

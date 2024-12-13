@@ -1,1 +1,16 @@
+<!-- 
+This is like a box (container) that holds our login form.
+
+Think of it like this:
+🎁 Box (container/ parent) 
+   └── 📝 Login Form (inside the box/ child)
+
+What's happening here?
+1. [regForm]: Gives the login form its information 
+   (like when you give your friend a paper to fill out)
+
+2. (signIn): Listens for when someone clicks "Sign In" 
+   (like when your friend tells you they're done filling the form)
+-->
+
 <app-signin [regForm]="regForm" (signIn)="signIn()"></app-signin>

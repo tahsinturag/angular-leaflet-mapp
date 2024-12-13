@@ -1,3 +1,18 @@
+<!-- 
+  Purpose of this file:
+  This is a reusable table that can show different types of data:
+  1. Brand information with sales amounts
+  2. Division/District information with sales amounts
+  3. Market share information with percentages
+
+  How it works:
+  - The table adjusts its headers and content based on what type of data we're showing
+    (controlled by tableTabType variable)
+  - When users click on a row, it can show more details about brands or districts
+  - Numbers are formatted nicely and show either Taka (৳) or percentage (%) symbols
+  - The table has a fixed height and can scroll if there's too much data
+-->
+
 <div class="table-container" style="overflow-x: scroll; max-height: 380px">
   <table class="table table-hover" style="padding: 0; margin: 0">
     <thead class="">
@@ -10,15 +25,13 @@
     </thead>
     <tbody>
       @for (item of data; track $index) {
-      <tr
-        (click)="
+      <tr (click)="
           tableTabType === 'demographic'
             ? showDistrictsHandler(item)
             : tableTabType === 'brands'
             ? showBrandDetails(0)
             : ''
-        "
-      >
+        ">
         <td style="color: #282b31; font-size: 14px">
           {{ item?.divisionName || item.districtName || item.drugName }}
         </td>
@@ -27,13 +40,13 @@
           <ng-container>৳</ng-container>
           }
           {{
-            formatNumber(
-              tableTabType === "market_share"
-                ? item.salesPercentage || 0
-                : tableTabType === "demographic"
-                ? item?.totalSales || item.districtSales || 0
-                : item.totalAmount || 0
-            )
+          formatNumber(
+          tableTabType === "market_share"
+          ? item.salesPercentage || 0
+          : tableTabType === "demographic"
+          ? item?.totalSales || item.districtSales || 0
+          : item.totalAmount || 0
+          )
           }}
           @if (tableTabType === "market_share") {
           <ng-container>%</ng-container>
